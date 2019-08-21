@@ -38,7 +38,7 @@
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">We are not alone.</a>
+          <a href="/" id="subtitle">I am not alone.</a>
         </h2>
       
     </div>
@@ -66,77 +66,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-noip2018" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-blogging starts" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/08/17/noip2018/" class="article-date">
-  <time datetime="2019-08-17T11:23:44.520Z" itemprop="datePublished">2019-08-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>在机房颓废。试着打了一下Tarjan的模板，缩点啊割点啊缩块啊，反正总是犯各种神奇的错误。。。然后下午就在家里继续颓废。。。反正我才初二，不急。</p>
-<h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><h2 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h2><p>早上在家里磨蹭到7：20才起床，然后慢悠悠地吃早饭。感觉不错。</p>
-<p>吃完饭之后乘车去考场。大约8:10左右到了考场，遇到了@zzw4257 @Shik2005 等dalao，互相膜拜。大约八点二十的时候进考场，打了头文件，写了freopen。感觉良好。然后就开始考试了。</p>
-<p>解压密码 飞雪连天。<del>飞雪连天射白鹿</del> </p>
-<p>开始看第一题。</p>
-<p>啥？这道题如此的熟悉？或许是原题？</p>
-<p>然而我考试时竟然没有想到积木大赛那道题！！！如此悲哀。。。</p>
-<p>开始自己yy出一些奇怪的算法，比如一直维护双指针在这里面循环着跑之类的。但是调了半个小时仍然没有过大样例。绝望。。。</p>
-<p>所以马上开始写一发分治，思路就是先找最小值，把每个数都减去最小值，然后把以最小值为中点，在两边分治。最后ans直接每次都加上最小值就好了。这样大样例就过了。</p>
-<p>考试的时候被那个<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">好的，来看第二题。去上了个厕所。</span><br><span class="line"></span><br><span class="line">上完厕所回来发现这不就是个完全背包吗。。。直接开始写，过了大样例就没管了。我的思路是先删掉成倍数关系的，从小到大删掉能被表示出来的。感觉沾沾自喜。```我NOIP2018 TGDay1有200分！</span><br></pre></td></tr></table></figure></p>
-<p>开始看第三题，感觉也似曾相识。先把那树的最长链的20分拿了，再把那链上二分+贪心的20分拿了，就开始在考场里颓废了。。mspaint 真好玩！</p>
-<ul>
-<li>Day1 估分：100+100+40=240</li>
-<li>Day1 Luogu测试分数：100+70（打脸了）+40=210</li>
-</ul>
-<h2 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h2><p>中午吃的牛肉面，然后在某同学家长的工作地点休息了一会。之后就去考普及。解压密码改革开放四十年。</p>
-<p>T1竟然不像成绩那么简单？但还是很简单的，使用cin轻松水过。5分钟打完看T2。T2好像也很可做的样子，于是就开始写。写了10分钟过了大样例就没管了。</p>
-<p><strong>我竟然不知道abs里面不能放long long要不然会炸！！！最大值又设小了！40分丢掉。。。平时从没犯过这样的错误，还是考场上松懈了吧。唉，我还是太菜了。。。</strong></p>
-<p>T3看上去不可做，看了半天不知所措。开始写一个明显错误的贪心，最后发现样例都过不了。。于是试着开始写了一个仍然明显错误的dp，转移方程是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(s[i])f[i]=f[max(i-m,0)]+W(max(i-m+1,0),i);</span><br><span class="line">else f[i]=min(f[i-1],f[max(i-m,0)]+W(max(i-m+1,0),i));</span><br><span class="line">if(i&gt;=t[n])ans=min(ans,f[i]);</span><br></pre></td></tr></table></figure></p>
-<p>发现过不了大样例。果断弃疗去做T4。</p>
-<p>T4仍然不会做。我的想法是如果一个子树是对称二叉树，他的左子树优先dfs序就与右子树优先dfs序相同。开始码。在比较dfs序这个问题上，我是用的vector自带的比较功能。开始写了一个暴力：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if(a[i].l&amp;&amp;a[i].r&amp;&amp;a[a[i].l].value==a[a[i].r].value&amp;&amp;a[a[i].l].size==a[a[i].r].size)&#123;</span><br><span class="line">    if(a[i].size&lt;=ans)continue;</span><br><span class="line">    x.clear();</span><br><span class="line">    y.clear();</span><br><span class="line">    dfs1(i,1);</span><br><span class="line">    dfs2(i,1);</span><br><span class="line">    if(x==y)&#123;</span><br><span class="line">        ans=max(ans,(int)x.size()/2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>最开始我dfs序只记录了权值没过大样例，后来发现还需要记录深度。这样大样例跑了2s，加了读入优化还是跑了1.5s。。。心虚啊。</p>
-<ul>
-<li>估分：100+100+?+?=300</li>
-<li>Luogu分数：100+60+65+84=309</li>
-</ul>
-<h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><p>早上仍然在家里磨蹭到7：20才起床。</p>
-<p>还是乘车去考场。八点十五的时候进考场，打了头文件，写了freopen。然后就开始考试了。密码是一些很神奇的字符，我看不懂啊。</p>
-<p><strong>NOIP啥时候开始考基环树了！</strong> </p>
-<p>先自己yy了一种奇怪的优先队列BFS，样例都过不去。最后只好 $O(n^2)$ dfs拿了60分的树的情况，然后开始看T2。</p>
-<p>T2也不可做啊，目测状压dp。开始看T3。T3好像有44分的暴力分很好拿，先拿了再说。于是花了30分钟打了暴力。然后发现自己题意理解错了，大样例过不去。算了20分钟才发现是题意理解错了。。花了一会重构了代码，终于过了大样例。开始看T2。</p>
-<p>手算了一下，好像n=1的情况就是2的次方？打了再说。</p>
-<p>再算n=2，m=3的情况，突然发现好像n=2的情况就是 $4\times 3$ 的次方？50分get！（flag）</p>
-<p>然后继续看T1，仍然觉得不可做。自己手算了一些特殊例子，发现环的情况好像很好做？于是开始码，最后过了自己的各个样例。又有了12分了！</p>
-<p>然后就继续颓。到大约11：50的时候去检查，发现我T1变量名用了y1和y2！慌张！马上用Devc++自带的替换功能，把代码改了一下。心虚。。。</p>
-<ul>
-<li>Day2 估分：72+50+44=166</li>
-<li>Day2 Luogu测试分数：72+55+44=171</li>
-</ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>实际：提高381 普及自己也忘了qwq</p>
-<p>这次NOIP仍然没有上400分。究其原因还是各种基本功练得不扎实，各类算法仍然掌握的不够好。以后一定还是是要多练模板和各种综合类的题，使自己在考场上不再像今年一样丢不该丢的分。</p>
-<h2 id="The-Story-of-OI-Never-Ends"><a href="#The-Story-of-OI-Never-Ends" class="headerlink" title="_The Story of OI Never Ends!_"></a>_The Story of OI Never Ends!_</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://R-G-Mocoratioen.github.io/2019/08/17/noip2018/" data-id="cjzfgh9e10001mon8swptxoza" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2019.8.15 Test" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/15/2019.8.15 Test/" class="article-date">
-  <time datetime="2019-08-14T16:00:00.000Z" itemprop="datePublished">2019-08-15</time>
+    <a href="/2019/08/21/blogging starts/" class="article-date">
+  <time datetime="2019-08-20T16:00:00.000Z" itemprop="datePublished">2019-08-21</time>
 </a>
     
   </div>
@@ -147,7 +80,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/15/2019.8.15 Test/">2019.8.15 Test</a>
+      <a class="article-title" href="/2019/08/21/blogging starts/">创博感想</a>
     </h1>
   
 
@@ -155,20 +88,65 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>求一个序列有多少种循环移动方案使任意前缀和均大于 $0$。序列长度 $\le 10^6$。</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>首先断环为链，然后枚举从 $n+1$ 到 $2n$ 的所有位置，用 $\mathrm{ST}$ 表或单调队列维护距离在 $n$ 以内前缀和最大值，判断 $s_i-minn$ 是否大于零即可。</p>
+        <p>感谢看到这里的每一个人。你们是我把文章上传到这的动力QAQ。</p>
+<p>其实拥有自己的一种东西本来就是一种目标。以前我曾经在“凡科网”创立过一个网站，并且因某程序而闻名全年级。但是那个网站终究还是缺乏自主性，因此在几个月前我自己写了一个纯文本的页面把所有程序下载搬到了那里（可是几乎无人问津）。暑假我又写了另外一个项目叫“PAW”（就是那个有ZKY的照片的网站）然后宣传了一下，但仍然没办法借它来表达自己的感想。所以现在这个Blog弥补了（几乎）一切不足。</p>
+<p>当然这个博客还是有一些不足的。目前还没有评论功能，等以后有时间了再补上吧（估计要咕）；然后搭建在国外的Github服务器上，访问速度巨慢，特别是数学公式和图片。因此请大家耐心等待。</p>
+<p>感谢所有人的捧场！</p>
         
           <p class="article-more-link">
-            <a href="/2019/08/15/2019.8.15 Test/#more">Read More</a>
+            <a href="/2019/08/21/blogging starts/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://R-G-Mocoratioen.github.io/2019/08/15/2019.8.15 Test/" data-id="cjzfgh9dk0000mon84a188r3b" class="article-share-link">Share</a>
+      <a data-url="http://R-G-Mocoratioen.github.io/2019/08/21/blogging starts/" data-id="cjzkm2fd70000x8n8yphvbxyd" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tests/">Tests</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/感想/">感想</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-noip2018" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/17/noip2018/" class="article-date">
+  <time datetime="2019-08-16T16:00:00.000Z" itemprop="datePublished">2019-08-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/17/noip2018/">NOIP2018 游记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>在机房颓废。试着打了一下Tarjan的模板，缩点啊割点啊缩块啊，反正总是犯各种神奇的错误。。。然后下午就在家里继续颓废。。。反正我才初二，不急。</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/08/17/noip2018/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://R-G-Mocoratioen.github.io/2019/08/17/noip2018/" data-id="cjzkm2fdh0001x8n80y8yxpfx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游记/">游记</a></li></ul>
 
     </footer>
   </div>
@@ -190,7 +168,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tests/">Tests</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/感想/">感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a></li></ul>
     </div>
   </div>
 
@@ -200,7 +178,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Tests/" style="font-size: 10px;">Tests</a>
+      <a href="/tags/感想/" style="font-size: 10px;">感想</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a>
     </div>
   </div>
 
@@ -222,11 +200,11 @@
       <ul>
         
           <li>
-            <a href="/2019/08/17/noip2018/">(no title)</a>
+            <a href="/2019/08/21/blogging starts/">创博感想</a>
           </li>
         
           <li>
-            <a href="/2019/08/15/2019.8.15 Test/">2019.8.15 Test</a>
+            <a href="/2019/08/17/noip2018/">NOIP2018 游记</a>
           </li>
         
       </ul>
